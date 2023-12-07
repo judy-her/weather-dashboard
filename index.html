@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tailwindstyle.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <!-- header -->
+
+    <header
+      class="bg-gradient-to-r from-cyan-200 via-violet-600 to-blue-700 py-4"
+    >
+      <h1
+        class="font-playpen text-[45px] text-center bg-gradient-to-b from-yellow-50 to-blue-600 bg-clip-text text-transparent"
+      >
+        Weather Dashboard
+      </h1>
+    </header>
+    <!-- Search bar-autocomplete -->
+    <div class="ui-widget">
+      <label class="bg-slate-300 flex mt-16 mx-10 w-[200px]" for="birds"
+        >Birds:
+      </label>
+      <input id="birds" size="50" />
+    </div>
+
+    <!-- jquery and jquery ui -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
