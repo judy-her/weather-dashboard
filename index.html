@@ -30,18 +30,22 @@
       </h1>
     </header>
     <!-- grid -->
-    <aside class="grid grid-cols-2 gap-2">
-      <div class="h-24 bg-violet-400">
+    <aside class="grid grid-cols-3 gap-2">
+      <div class="h-80 bg-blue-300">
         <h1 class="font-playpen text-[35px] text-center">Search for a City:</h1>
-        <button class="rounded-full bg-slate-400 w-52">Search</button>
+        <button class="rounded-full bg-slate-400 w-full text-[20px]">
+          Search
+        </button>
+        <hr
+          class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
+        />
       </div>
-      <div class="h-24 bg-violet-400"></div>
+      <div class="h-24 col-span-2 bg-violet-400"></div>
     </aside>
-    <div class="ui-widget">
-      <label class="bg-slate-300 flex mt-16 mx-10 w-[200px]" for="birds"
-        >Birds:
-      </label>
-      <input id="birds" size="50" />
+    <!-- changed ui-widget from class to id -->
+    <div id="ui-widget" class="bg-slate-400 h-40">
+      <label class="flex mt-16 mx-10" for="birds">Birds: </label>
+      <input id="birds" size="60px" />
     </div>
 
     <!-- jquery and jquery ui -->
