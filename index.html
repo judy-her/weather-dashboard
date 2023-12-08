@@ -30,23 +30,44 @@
       </h1>
     </header>
     <!-- grid -->
-    <aside class="grid grid-cols-3 gap-2">
-      <div class="h-80 bg-blue-300">
+    <main class="grid grid-cols-3 gap-2 grid-rows-5">
+      <div class="row-span-5 bg-blue-300">
         <h1 class="font-playpen text-[35px] text-center">Search for a City:</h1>
+        <!-- changed ui-widget from class to id -->
+        <div id="ui-widget" class="h-40 pl-2">
+          <label class="mt-5 mx-1 text-center m-auto" for="birds">City: </label>
+          <input id="birds" size="60px" />
+        </div>
         <button class="rounded-full bg-slate-400 w-full text-[20px]">
           Search
         </button>
         <hr
           class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
         />
-        <!-- changed ui-widget from class to id -->
-        <div id="ui-widget" class="h-40">
-          <label class="flex mt-16 mx-10" for="birds">City: </label>
-          <input id="birds" size="60px" />
-        </div>
+        <ul>
+          <li>saved item</li>
+          <li>saved item</li>
+          <li>saved item</li>
+          <li>saved item</li>
+        </ul>
       </div>
-      <div class="h-24 col-span-2 bg-violet-400"></div>
-    </aside>
+      <!--weather container   -->
+      <div
+        class="col-span-2 row-start-1 row-end-2 bg-violet-400 shadow-lg shadow-indigo-500/50"
+      >
+        <h1 class="font-playpen text-[35px] pb-2">
+          City <span>Date</span> <span>icon</span>
+        </h1>
+        <ul class="space-y-3 pl-3">
+          <li class="font-playpen text-[25px]">Temp:</li>
+          <li class="font-playpen text-[25px]">Wind:</li>
+          <li class="font-playpen text-[25px]">Humidity:</li>
+        </ul>
+      </div>
+      <div class="col-span-2 row-span-2 bg-blue-400">
+        <h1 class="font-playpen text-[30px]">5-Day Forecast:</h1>
+      </div>
+    </main>
 
     <!-- jquery and jquery ui -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
