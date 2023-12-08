@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bf980fe4de.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,26 +24,24 @@
   <body>
     <!-- header -->
 
-    <header
-      class="bg-gradient-to-r from-cyan-200 via-violet-600 to-blue-700 py-4"
-    >
-      <h1
-        class="font-playpen text-[45px] text-center bg-gradient-to-b from-yellow-50 to-blue-600 bg-clip-text text-transparent"
-      >
+    <header class="gradient-bg py-4">
+      <h1 class="text-gradient text-[45px]">
         Weather Dashboard
       </h1>
     </header>
     <!-- grid -->
     <main class="grid grid-cols-3 gap-2 grid-rows-5">
-      <div class="row-span-5 bg-blue-300">
-        <h1 class="font-playpen text-[35px] text-center">Search for a City:</h1>
+      <div class="row-span-5 bg-gradient-to-b from-violet-800 to-neutral-200">
+        <h1 class="font-playpen text-gradient text-[35px] text-center">
+          Search for a City:
+        </h1>
         <!-- changed ui-widget from class to id -->
         <div id="ui-widget" class="h-40 pl-2">
           <label class="mt-5 mx-1 text-center m-auto" for="birds">City: </label>
           <input id="birds" size="60px" />
         </div>
-        <button class="rounded-full bg-slate-400 w-full text-[20px]">
-          Search
+        <button class="gradient-bg rounded-full bg-slate-400 w-full">
+          <h2 class="text-[20px] text-gradient">Search</h2>
         </button>
         <hr
           class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
@@ -56,7 +58,8 @@
         class="col-span-2 row-start-1 row-end-2 bg-violet-400 shadow-lg shadow-indigo-500/50"
       >
         <h1 class="font-playpen text-[35px] pb-2">
-          City <span>Date</span> <span>icon</span>
+          City <span>Date</span>
+          <span>icon </span>
         </h1>
         <ul class="space-y-3 pl-3">
           <li class="font-playpen text-[25px]">Temp:</li>
@@ -66,6 +69,40 @@
       </div>
       <div class="col-span-2 row-span-2 bg-blue-400">
         <h1 class="font-playpen text-[30px]">5-Day Forecast:</h1>
+      </div>
+      <div class="bg-slate-400">
+        <h2 class="font-playpen text-gradient text-[35px] text-center">
+          Icons
+        </h2>
+        <div>
+          <ul>
+            <li class="sunny">
+              <i
+                id="sunny"
+                class="fa-solid fa-sun fa-5x"
+                style="color: #f5f90b;"
+              ></i>
+            </li>
+            <li class="cloudy">
+              <i
+                class="fa-solid fa-cloud-sun fa-5x"
+                style="color: #6e7277;"
+              ></i>
+            </li>
+            <li class="rain">
+              <i
+                class="fa-solid fa-cloud-showers-heavy fa-5x"
+                style="color: #6594c3;"
+              ></i>
+            </li>
+            <li class="snow">
+              <i
+                class="fa-regular fa-snowflake fa-5x"
+                style="color: #eaeef6;"
+              ></i>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
 

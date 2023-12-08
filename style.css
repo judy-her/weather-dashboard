@@ -5,3 +5,12 @@
 .ui-autocomplete-loading {
   background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
 }
+
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-r from-cyan-200 via-violet-600 to-blue-700;
+  }
+  .text-gradient {
+    @apply font-playpen text-center bg-gradient-to-b from-yellow-50 to-blue-600 bg-clip-text text-transparent;
+  }
+}
