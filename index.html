@@ -35,11 +35,19 @@
         <h1 class="font-playpen text-gradient text-[35px] text-center">
           Search for a City:
         </h1>
-        <!-- changed ui-widget from class to id -->
-        <div id="ui-widget" class="h-40 pl-2">
+
+        <!-- search from class -->
+        <form id="search-form" class="form h-10 pl-2">
           <label class="mt-5 mx-1 text-center m-auto" for="birds">City: </label>
-          <input id="birds" size="60px" />
-        </div>
+          <input
+            id="search-input"
+            class="form-input"
+            size="60px"
+            type="text"
+            placeholder="Name of city"
+          />
+        </form>
+
         <button class="gradient-bg rounded-full bg-slate-400 w-full">
           <h2 class="text-[20px] text-gradient">Search</h2>
         </button>
