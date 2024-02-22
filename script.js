@@ -1,25 +1,40 @@
-console.log('I am connected');
-var searchFormEl = document.querySelector('#search-form');
+console.log('I am connected :)');
+const APIKey = 'f4d2ec0aceb6adaf6e9866e242642310';
 
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
+const url = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={APIKey}"
 
-  var searchInputVal = document.querySelector('#search-input').value;
+let city;
 
-  if (!searchInputVal) {
-    console.error('You need a search input value!');
-    return;
-  }
-  // url to redirect user to search results page ./search-results.html
-  //value of searchinput val
-  //format parameter
-  // //and format input val parameter
-  // var queryString =
-  //   './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
+const weatherApp = {
+  init: () => {
+    document
+      .getElementById('search-btn')
+      .addEventListener('click', weatherApp.fetchWeather);
+    document
+      .getElementById('btnCurrent')
+      .addEventListener('click', weatherApp.getLocation);
+  },
+function fetchWeather() {
 
-  // location.assign(queryString); //if we use.replace() we can't use back button, it will take back to google.com instead of our created website
-  // // could also do this below
-  // location.href = queryString;
-}
+},
+//geolocation 
+function getLocation (ev) {
+    let opts = {
+        enableHighAccuracy: true,
+        timout: 1000 * 10, //10 seconds
+        maximumAge: 1000 * 60 * 5 //5 minutes
+    }
+    navigator.geolocation.getCurrentPosition(app.ftw, app.wtf,opts)
 
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+},
+ftw: (position)=>{
+
+},
+wtf: (err)=>{
+
+},
+function showWeather (){
+
+},
+ 
+};
