@@ -11,6 +11,14 @@ fetch(queryURL)
   .then((data) => console.log(data))
   .catch((error) => console.error('Error', error));
 
+const formData = {
+  name: '',
+  coord: {
+    lon: '',
+    lat: '',
+  },
+};
+
 // const weatherApp = {
 //   init: () => {
 //     document
@@ -20,6 +28,7 @@ fetch(queryURL)
 //       .getElementById('btnCurrent')
 //       .addEventListener('click', weatherApp.getLocation);
 //   },
+
 // function fetchWeather() {
 
 // },

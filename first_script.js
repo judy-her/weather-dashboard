@@ -34,10 +34,10 @@ function getParams() {
 }
 
 // SECTION Search API-----------------------------
-const apiKey = 'f4d2ec0aceb6adaf6e9866e24264231';
+//IMPORTANT if will use in future fix this secret issue
+const APIKey = process.env.APIKey;
 function searchApi(query, limit) {
-  var locQueryUrl =
-    'http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=f4d2ec0aceb6adaf6e9866e242642310';
+  var locQueryUrl = `http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=${APIKey}`;
 
   //fo is jason format
   if (limit) {
