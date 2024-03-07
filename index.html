@@ -49,7 +49,7 @@
           />
           <div class="mt-2">
             <button
-              id="search-btn"
+              id="searchButton"
               class="gradient-bg rounded-full bg-slate-400 w-full"
             >
               <h2 class="text-[20px] text-gradient">Search</h2>
@@ -80,12 +80,13 @@
           City <span>Date</span>
           <span>icon </span>
         </h1>
-        <ul class="space-y-3 pl-3">
-          <li class="font-playpen text-[25px]">Temp:</li>
+        <ul id="temp-wind-humidity" class="space-y-3 pl-3">
+          <!-- <li class="font-playpen text-[25px]">Temp:</li>
           <li class="font-playpen text-[25px]">Wind:</li>
-          <li class="font-playpen text-[25px]">Humidity:</li>
+          <li class="font-playpen text-[25px]">Humidity:</li> -->
         </ul>
       </div>
+
       <div class="col-span-2 row-span-2 bg-blue-400">
         <h1 class="font-playpen text-[30px]">5-Day Forecast:</h1>
       </div>
@@ -97,39 +98,6 @@
         <div id="result-content"></div>
       </div>
     </main>
-
-    <!--icons  -->
-    <div class="bg-slate-400">
-      <h2 class="font-playpen text-gradient text-[35px] text-center">
-        Icons
-      </h2>
-      <div>
-        <ul>
-          <li class="sunny">
-            <i
-              id="sunny"
-              class="fa-solid fa-sun fa-5x"
-              style="color: #f5f90b;"
-            ></i>
-          </li>
-          <li class="cloudy">
-            <i class="fa-solid fa-cloud-sun fa-5x" style="color: #6e7277;"></i>
-          </li>
-          <li class="rain">
-            <i
-              class="fa-solid fa-cloud-showers-heavy fa-5x"
-              style="color: #6594c3;"
-            ></i>
-          </li>
-          <li class="snow">
-            <i
-              class="fa-regular fa-snowflake fa-5x"
-              style="color: #eaeef6;"
-            ></i>
-          </li>
-        </ul>
-      </div>
-    </div>
 
     <!-- jquery and jquery ui -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
