@@ -1,6 +1,6 @@
 console.log('I am connected :)');
 
-// const url = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={APIKey}"
+// const base_url = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={APIKey}"
 
 const APIKey = 'f4d2ec0aceb6adaf6e9866e242642310';
 

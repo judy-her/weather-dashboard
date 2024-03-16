@@ -21,83 +21,54 @@
     <link rel="stylesheet" href="./tailwindstyle.css" />
     <title>Weather Dashboard</title>
   </head>
-  <body>
+  <body class="gradient-new">
     <!-- header -->
-
-    <header class="gradient-bg py-4">
-      <h1 class="text-gradient text-[45px]">
+    <header class="py-4">
+      <h1 class="text-4xl text-center font-large text-green-200 font-playpen">
         Weather Dashboard
       </h1>
     </header>
-    <!-- grid -->
-    <main class="grid grid-cols-3 gap-2 grid-rows-5">
-      <div class="row-span-5 bg-gradient-to-b from-violet-800 to-neutral-200">
-        <h1 class="font-playpen text-gradient text-[35px] text-center">
-          Search for a City:
-        </h1>
-
-        <!-- search from class -->
-        <form id="search-form" class="form h-10 pl-2">
-          <!-- <label class="mt-5 mx-1 text-center m-auto text-white" for="birds"
-            >City:
-          </label> -->
-          <input
-            id="search-input"
-            class="form-input py-2 rounded-md"
-            type="text"
-            placeholder="Name of city"
-          />
-          <div class="mt-2">
-            <button
-              id="searchButton"
-              class="gradient-bg rounded-full bg-slate-400 w-full"
-            >
-              <h2 class="text-[20px] text-gradient">Search</h2>
-            </button>
-          </div>
-        </form>
-
-        <!-- horizontal rule -->
-        <div class="pt-3">
-          <hr
-            class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
-          />
-        </div>
-
-        <ul>
-          <li>saved item</li>
-          <li>saved item</li>
-          <li>saved item</li>
-          <li>saved item</li>
-        </ul>
+    <!-- search div-->
+    <div class="flex flex-row justify-center my-6 mx-12">
+      <!--  search input -->
+      <div class="flex flex-row w-3/4 items-center justify-center space-x-4">
+        <input
+          type="text"
+          placeholder="search for city...."
+          class="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
+        />
+      </div>
+      <!-- temp -->
+      <div class="flex flex-row w-1/4 items-center justify-center">
+        <button
+          name="metric"
+          class="text-xl text-white font-light font-playpen"
+        >
+          °C
+        </button>
+        <p class="text-xl text-white mx-1">|</p>
+        <button
+          name="imperial"
+          class="text-xl text-white font-light font-playpen"
+        >
+          °F
+        </button>
+      </div>
+    </div>
+    <!-- date div -->
+    <div>
+      <!--  Time div  -->
+      <div class="flex items-center justify-center my-6">
+        <p class="text-white text-xl font-extralight font-playpen">
+          Saturday, 2 March 2024 | Local Time: 12:46 PM
+        </p>
       </div>
 
-      <!--weather container   -->
-      <div
-        class="col-span-2 row-start-1 row-end-2 bg-violet-400 shadow-lg shadow-indigo-500/50"
-      >
-        <h1 class="font-playpen text-[35px] pb-2">
-          City <span>Date</span>
-          <span>icon </span>
-        </h1>
-        <ul id="temp-wind-humidity" class="space-y-3 pl-3">
-          <!-- <li class="font-playpen text-[25px]">Temp:</li>
-          <li class="font-playpen text-[25px]">Wind:</li>
-          <li class="font-playpen text-[25px]">Humidity:</li> -->
-        </ul>
+      <!--  city and country div  -->
+      <div class="flex flex-items justify-center my-3">
+        <p class="text-white text-3xl font-medium">London, GB</p>
       </div>
-
-      <div class="col-span-2 row-span-2 bg-blue-400">
-        <h1 class="font-playpen text-[30px]">5-Day Forecast:</h1>
-      </div>
-      <!-- SEARCH RESUTLS -->
-      <div class="bg-slate-300 gradient-bg col-span-2 row-span-2">
-        <h2 class="font-playpen text-[25px] text-center">
-          Showing results for <span id="result-text"></span>
-        </h2>
-        <div id="result-content"></div>
-      </div>
-    </main>
+    </div>
 
     <!-- jquery and jquery ui -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
