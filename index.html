@@ -59,21 +59,26 @@
     <div>
       <!--  Time div  -->
       <div class="flex items-center justify-center my-6">
-        <p class="text-white text-xl font-extralight font-playpen">
+        <p
+          id="dateMain"
+          class="text-white text-xl font-extralight font-playpen"
+        >
           Saturday, 2 March 2024 | Local Time: 12:46 PM
         </p>
       </div>
 
       <!--  city and country div  -->
       <div class="flex flex-items justify-center my-3">
-        <p class="text-white text-3xl font-medium">London, GB</p>
+        <p class="text-white text-3xl font-medium">
+          <span id="cityName"></span>, <span id="country"></span>
+        </p>
       </div>
     </div>
     <!-- TemperatureAndDetails  -->
     <div>
       <!-- div for cloudy -->
       <div class="flex items-center justify-center py-6 text-xl text-green-200">
-        <p>Cloudy</p>
+        <p><span id="description">Cloudy</span></p>
       </div>
 
       <!-- div for image -->
@@ -86,7 +91,7 @@
           class="w-20"
         />
         <!--  p for temp  -->
-        <p class="text-5xl">34°</p>
+        <p id="temp" class="text-5xl">34°</p>
 
         <div class="flex flex-col space-y-2">
           <!--  div for feels like, himidity, and wind   -->

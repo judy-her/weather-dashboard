@@ -1,4 +1,13 @@
 console.log('I am connected');
+let cityName = document.getElementById('cityName');
+let country = document.getElementById('country');
+let dateMain = document.getElementById('dateMain');
+let icon = document.getElementById('icon');
+let temp = document.getElementById('temp');
+let feelsLike = document.getElementById('feelsLike');
+let humidity = document.getElementById('humidity');
+let wind = document.getElementById('wind');
+let d = document.getElementById('description');
 
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
@@ -30,8 +39,35 @@ getWeatherData().then((weatherData) => {
 
   getForecastData(lat, lon).then((forecastData) => {
     console.log('Forecast Data', forecastData);
+    const { city, list } = forecastData;
+
+    list.forEach((item) => {
+      const { main, weather, wind } = item;
+      const { description, icon } = weather[0];
+
+      console.log('Main from Forecast:', main);
+      console.log('Weather from Forecast:', weather);
+      console.log('City', city.name);
+      console.log('Country', city.country);
+      console.log('description:', description);
+      cityName.textContent = city.name;
+      country.textContent = city.country;
+      temp.textContent = main.temp;
+      d.textContent = description;
+    });
   });
 });
+
+const formatToLocalTime = (
+  secs,
+  zone,
+  format = "dddd, DD MMMM YYYY' | Local Time: 'hh:mm a"
+) => {
+  return dayjs
+    .unix(secs)
+    .utcOffset(zone / 60)
+    .format(format);
+};
 
 //use this lat and lon for api forecast
 //   let cnt = 5;
