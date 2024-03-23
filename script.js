@@ -12,8 +12,8 @@ let desc = document.getElementById('description');
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
 let query = 'El Monte';
-let units = 'imperial';
-const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=${units}`;
+
+const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=imperial`;
 
 const cnt = 5; //for 5 days
 
@@ -23,7 +23,8 @@ const getWeatherData = () => {
 
 const getForecastData = (lat, lon) => {
   //forecast url
-  const forecastBASE_URL = `https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${API_KEY}&cnt=${cnt}&lat=${lat}&lon=${lon}`;
+  const forecastBASE_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`;
+  //   &cnt=${cnt}`;
   return fetch(forecastBASE_URL)
     .then((res) => res.json())
     .then(console.log('Forecast API', forecastBASE_URL));
@@ -54,6 +55,7 @@ getWeatherData().then((weatherData) => {
       console.log('Feels like', main.feels_like);
       console.log('Humidity', main.humidity);
       console.log('Wind', wind.speed);
+      console.log('Temp for day', temp.day);
       cityName.textContent = city.name;
       country.textContent = city.country;
       temp.textContent = main.temp;
@@ -61,6 +63,7 @@ getWeatherData().then((weatherData) => {
       feelsLike.textContent = main.feels_like;
       humid.textContent = main.humidity;
       w.textContent = wind.speed;
+      icon.textContent = icon;
       //   wind.textContent;
     });
   });
