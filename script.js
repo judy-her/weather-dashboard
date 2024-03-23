@@ -9,6 +9,8 @@ let humid = document.getElementById('h');
 let w = document.getElementById('w');
 let desc = document.getElementById('description');
 
+let mainIcon = document.getElementById('mainIcon');
+
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
 let query = 'El Monte';
@@ -63,8 +65,11 @@ getWeatherData().then((weatherData) => {
       feelsLike.textContent = main.feels_like;
       humid.textContent = main.humidity;
       w.textContent = wind.speed;
-      icon.textContent = icon;
+      //   icon.textContent = icon;
       //   wind.textContent;
+      //for icons
+      let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+      mainIcon.src = iconUrl;
     });
   });
 });
