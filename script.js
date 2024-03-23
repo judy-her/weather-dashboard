@@ -5,13 +5,13 @@ let dateMain = document.getElementById('dateMain');
 let icon = document.getElementById('icon');
 let temp = document.getElementById('temp');
 let feelsLike = document.getElementById('feelsLike');
-let humidity = document.getElementById('humidity');
-let wind = document.getElementById('wind');
-let d = document.getElementById('description');
+let humid = document.getElementById('h');
+let w = document.getElementById('w');
+let desc = document.getElementById('description');
 
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
-let query = 'london';
+let query = 'El Monte';
 let units = 'imperial';
 const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=${units}`;
 
@@ -50,10 +50,18 @@ getWeatherData().then((weatherData) => {
       console.log('City', city.name);
       console.log('Country', city.country);
       console.log('description:', description);
+      console.log('Weather icon', icon);
+      console.log('Feels like', main.feels_like);
+      console.log('Humidity', main.humidity);
+      console.log('Wind', wind.speed);
       cityName.textContent = city.name;
       country.textContent = city.country;
       temp.textContent = main.temp;
-      d.textContent = description;
+      desc.textContent = description;
+      feelsLike.textContent = main.feels_like;
+      humid.textContent = main.humidity;
+      w.textContent = wind.speed;
+      //   wind.textContent;
     });
   });
 });
